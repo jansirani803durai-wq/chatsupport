@@ -1,0 +1,20 @@
+{% for ticket in tickets %}
+
+<article class="card">
+    <h3>{{ ticket.subject }}</h3>
+
+    <p>{{ ticket.description }}</p>
+
+    <a
+        href="{% url 'claim_ticket' ticket.id %}"
+        class="button"
+    >
+        Claim Ticket
+    </a>
+</article>
+
+{% empty %}
+
+<p>No unassigned tickets.</p>
+
+{% endfor %}

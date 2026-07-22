@@ -1,0 +1,1 @@
+{% extends 'support/base.html' %}{% block content %}<h1>My Assigned Tickets</h1><div class='grid'>{% for t in tickets %}<article><h3>{{t.subject}}</h3><p>{{t.priority}} - {{t.status}}</p><a href='{% url "ticket_detail" t.id %}'>Open chat →</a></article>{% empty %}<p>No assigned tickets.</p>{% endfor %}</div>{% endblock %}

@@ -1,0 +1,1 @@
+{% extends 'support/base.html' %}{% block content %}<section><h1>Create Support Ticket</h1><p>AI assigns priority and department automatically.</p><form method='post'>{% csrf_token %}{{form.as_p}}<button class='btn'>Submit Ticket</button></form></section>{% endblock %}
